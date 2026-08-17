@@ -222,7 +222,7 @@ private fun BoxGrid(repository: LabRepository, box: StorageNode) {
             horizontalArrangement = Arrangement.spacedBy(4.dp),
             verticalArrangement = Arrangement.spacedBy(4.dp)
         ) {
-            items((0 until box.rows * box.columns).toList()) { index ->
+            items(box.rows * box.columns) { index ->
                 val row = index / box.columns
                 val column = index % box.columns
                 val position = "${'A' + row}${column + 1}"
